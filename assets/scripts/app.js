@@ -14,22 +14,25 @@ $(() => {
 })
 
 $('#sign-up-btn').click(function () {
-  $('#sign-up-form').fadeIn(500)
-  $('#sign-in-form').fadeOut(500)
-  $('#change-password-form').fadeOut(500)
+  // $('#sign-up-form').fadeIn(500)
+  $('#sign-up-form').show()
+  // $('#sign-in-form').fadeOut(500)
+  $('#sign-in-form').hide()
+  // $('#change-password-form').fadeOut(500)
+  $('#change-password-form').hide()
   $('#message').show(500)
 })
 
 $('#sign-in-btn').click(function () {
-  $('#sign-in-form').fadeIn(500)
-  $('#sign-up-form').fadeOut(500)
-  $('#change-password-form').fadeOut(500)
+  $('#sign-in-form').show()
+  $('#sign-up-form').hide()
+  $('#change-password-form').hide()
   $('#message').show(500)
 })
 
 $('#change-pass-btn').click(function () {
-  $('#change-password-form').fadeIn(500)
-  $('#sign-up-form').fadeOut(500)
-  $('#sign-in-form').fadeOut(500)
+  $('#change-password-form').show()
+  $('#sign-up-form').hide()
+  $('#sign-in-form').hide()
   $('#message').show(500)
 })

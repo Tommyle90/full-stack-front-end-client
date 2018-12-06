@@ -3,13 +3,16 @@
 $background: #922b21;
 $red: #a60202;
 $green: #00a402;
+$white: #FFF;
+$grey: #cdcdcd;
+$black: #000;
 
 .error-message {
-  color: $red;
+  color: $black;
 }
 
 .success-message {
-  color: $green;
+  color: $black;
 }
 
 body {
@@ -18,6 +21,8 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
 }
 
 .hidden {
@@ -33,22 +38,35 @@ body {
   display: none;
   margin: 0 auto;
 }
+.navbar {
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  font-size: 30px;
+}
 
 .forms {
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  display: flex;
+  align-items: center;
   width: 100%;
-  position: absolute;
-  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  // margin-bottom: 20px;
   #sign-up-form {
     display: none;
     margin: 0 auto;
+    margin-bottom: 20px;
   }
     #sign-in-form {
       display: none;
       margin: 0 auto;
+      margin-bottom: 20px;
     }
     #change-password-form {
         display: none;
         margin: 0 auto;
+        margin-bottom: 20px;
     }
 }
 
@@ -57,7 +75,7 @@ body {
   align-items: center;
   width: 100%;
   height: 150px;
-  font-size: 25px;
+  font-size: 30px;
   justify-content: center;
   flex-direction: column;
   margin-top: 20px;

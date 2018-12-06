@@ -9,7 +9,7 @@ const signUpSuccess = (signUpResponse) => {
   $('#change-password-form').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
-  $('#sign-up-form').fadeOut(500)
+  $('#sign-up-form').hide()
 }
 
 const failure = (failureResponse) => {
@@ -28,8 +28,8 @@ const signInSuccess = (signInResponse) => {
   $('#sign-out').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
-  $('#sign-up-form').fadeOut(50)
-  $('#sign-in-form').fadeOut(50)
+  $('#sign-up-form').hide()
+  $('#sign-in-form').hide()
   $('#sign-out-btn').show()
   $('#change-pass-btn').show()
   $('#sign-up-btn').hide()
@@ -40,7 +40,7 @@ const changePasswordSuccess = (changePasswordResponse) => {
   $('#message').html('You changed your password successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
-  $('#change-password-form').fadeOut(500)
+  $('#change-password-form').hide()
 }
 
 const onSignOutSuccess = (signOutResponse) => {
@@ -54,9 +54,9 @@ const onSignOutSuccess = (signOutResponse) => {
   $('#message-box').empty()
   $('#sign-out-btn').hide()
   $('#change-pass-btn').hide()
-  $('#sign-up-form').fadeOut(500)
-  $('#sign-in-form').fadeOut(500)
-  $('#change-password-form').fadeOut(500)
+  $('#sign-up-form').hide()
+  $('#sign-in-form').hide()
+  $('#change-password-form').hide()
   $('#sign-up-btn').show()
   $('#sign-in-btn').show()
   $('#bottom-btn').hide()
