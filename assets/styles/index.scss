@@ -1,1 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
+
+$background: #922b21;
+$red: #a60202;
+$green: #00a402;
+
+.error-message {
+  color: $red;
+}
+
+.success-message {
+  color: $green;
+}
+
+body {
+  background-color: $background;
+}
