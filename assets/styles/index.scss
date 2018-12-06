@@ -13,7 +13,11 @@ $green: #00a402;
 }
 
 body {
-  background-color: $background;
+  background-image: url("https://professionalcookingtips.com/wp-content/uploads/2017/12/grilled-sirloin-steak-with-chimichurri.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hidden {
