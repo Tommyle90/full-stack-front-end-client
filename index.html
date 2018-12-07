@@ -44,30 +44,35 @@
           <input type="submit">
         </form>
     </div>
+
     <div class="meal-box hidden">
       <form id="meal-form">
-        <legend> Meal Type </legend>
-        <select class="mealtype">
-          <option value="">Pick Your Meal</option>
-          <option value="BREAKFAST">Breakfast</option>
-          <option value="LUNCH">Lunch</option>
-          <option value="DINNER">Dinner</option>
-          <option value="SNACK">Snack</option>
-          <input type="submit">
-        </select>
-        <!-- <input type="submit"> -->
-      </form>
-      <form id="date-form">
+        <div class="mealsforms" id="mealtype-form">
+          <legend> Meal Type </legend>
+            <select id="meal-type">
+              <option value="">Pick Your Meal</option>
+              <option value="BREAKFAST" name="meal[mealtype]">BREAKFAST</option>
+              <option value="LUNCH" name="meal[mealtype]">LUNCH</option>
+              <option value="DINNER" name="meal[mealtype]">DINNER</option>
+              <option value="SNACK" name="meal[mealtype]">SNACK</option>
+              <!-- <input name="meal[mealtype]" type="string" value= class="hidden"> -->
+          </select>
+      </div>
+
+      <div class="mealsforms" id="date-form">
         <legend> Date </legend>
-        <input name="date" type="date">
-        <input type="submit">
-      </form>
-      <form id="meal-description-form">
+        <input name="meal[date]" type="date">
+      </div>
+
+      <div class="mealsforms" id="meal-description-form">
         <legend> Meal Description </legend>
-        <textarea class="description-submit" name="description" type="text" placeholder="meal description"></textarea>
-        <input class="submit-description"type="submit">
-      </form>
-    </div>
+        <textarea class="description-submit" name="meal[description]" type="text" placeholder="meal description"></textarea>
+      </div>
+
+      <button id="submit-button" type="submit" value="submit">Submit Form</button>
+    </form>
+  </div>
+
     <div class='messagegrid'>
       <div id="message"></div>
       <div id='message-box'></div>
