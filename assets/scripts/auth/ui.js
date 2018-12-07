@@ -40,6 +40,7 @@ const signInSuccess = (signInResponse) => {
   $('#change-pass-btn').show()
   $('#sign-up-btn').hide()
   $('#sign-in-btn').hide()
+  $('.meal-box').show()
 }
 //
 const changePasswordSuccess = (changePasswordResponse) => {
@@ -66,6 +67,7 @@ const onSignOutSuccess = (signOutResponse) => {
   $('#sign-up-btn').show()
   $('#sign-in-btn').show()
   $('#bottom-btn').hide()
+  $('.meal-box').hide()
 }
 
 module.exports = {
