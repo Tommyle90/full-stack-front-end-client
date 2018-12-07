@@ -46,16 +46,26 @@
     </div>
     <div class="meal-box">
       <form id="meal-form">
+        <legend> Meal Type </legend>
         <select class="mealtype">
           <option value="">Pick Your Meal</option>
           <option value="BREAKFAST">Breakfast</option>
           <option value="LUNCH">Lunch</option>
           <option value="DINNER">Dinner</option>
           <option value="SNACK">Snack</option>
+          <input type="submit">
         </select>
+        <!-- <input type="submit"> -->
       </form>
       <form id="date-form">
+        <legend> Date </legend>
         <input name="date" type="date">
+        <input type="submit">
+      </form>
+      <form id="meal-description-form">
+        <legend> Meal Description </legend>
+        <textarea class="description-submit" name="description" type="text" placeholder="meal description"></textarea>
+        <input class="submit-description"type="submit">
       </form>
     </div>
     <div class='messagegrid'>
