@@ -18,6 +18,12 @@ const failure = (failureResponse) => {
   $('#message').addClass('error-message')
 }
 
+const signUpFailure = (failureResponse) => {
+  $('#message').html('Sign up failed! Check your password! Minimum 6 characters')
+  $('#message').removeClass('success-message')
+  $('#message').addClass('error-message')
+}
+
 const signInSuccess = (signInResponse) => {
   store.user = signInResponse.user
   $('#message').show()
@@ -67,5 +73,6 @@ module.exports = {
   failure,
   signInSuccess,
   changePasswordSuccess,
-  onSignOutSuccess
+  onSignOutSuccess,
+  signUpFailure
 }

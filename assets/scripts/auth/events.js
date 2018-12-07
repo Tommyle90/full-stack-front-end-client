@@ -10,7 +10,7 @@ const onSignUp = (event) => {
   $(event.target).trigger('reset')
   api.signUp(userData)
     .then(ui.signUpSuccess)
-    .catch(ui.failure)
+    .catch(ui.signUpFailure)
 }
 //
 const onSignIn = (event) => {
