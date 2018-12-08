@@ -46,8 +46,15 @@
     </div>
 
     <div class="meal-box hidden">
+      <div class="button-grp">
+        <button class="meal-btns" id="new-meal-btn" type="button">New Meal</button>
+        <button class="meal-btns" id="show-meal-btn" type="button">All Meals</button>
+      </div>
+      <div class="get-all-meals hidden">
+
+      </div>
       <form id="meal-form">
-        <div class="mealsforms" id="mealtype-form">
+        <div class="mealsforms hidden" id="mealtype-form">
           <legend> Meal Type </legend>
             <select id="meal-type">
               <option value="">Pick Your Meal</option>
@@ -55,21 +62,21 @@
               <option value="LUNCH" name="meal[mealtype]">LUNCH</option>
               <option value="DINNER" name="meal[mealtype]">DINNER</option>
               <option value="SNACK" name="meal[mealtype]">SNACK</option>
-              <!-- <input name="meal[mealtype]" type="string" value= class="hidden"> -->
           </select>
       </div>
 
-      <div class="mealsforms" id="date-form">
+      <div class="mealsforms hidden" id="date-form">
         <legend> Date </legend>
         <input name="meal[date]" type="date">
       </div>
 
-      <div class="mealsforms" id="meal-description-form">
+      <div class="mealsforms hidden" id="meal-description-form">
         <legend> Meal Description </legend>
         <textarea class="description-submit" name="meal[description]" type="text" placeholder="meal description"></textarea>
       </div>
-
-      <button id="submit-button" type="submit" value="submit">Submit Form</button>
+      <div class="mealsforms hidden">
+        <button id="submit-button" type="submit" value="submit">Submit Form</button>
+      </div>
     </form>
   </div>
 

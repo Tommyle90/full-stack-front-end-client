@@ -1,0 +1,35 @@
+{{#each this as |meal|}}
+  {{log meal}}
+
+  {{#meal}}
+<div class="meal" data-id="{{id}}">
+  <div class="date meals" data-id="{{id}}">
+    <h4>
+     Date: <div class="date-hb">{{date}}</div>
+    </h4>
+  </div>
+
+  <div class="mealtype meals" data-id="{{id}}">
+    <ul>
+      Meal: <div class="meal-hb">{{mealtype}}</div>
+    </ul>
+  </div>
+
+  <div class="description meals" data-id="{{id}}">
+    <ul>
+      Description: {{description}}
+    </ul>
+  </div>
+<div data-id="{{id}}">
+  <form class="update-meal-form" data-id="{{id}}">
+    <textarea class="description-submits" type="text" placeholder="Update Description"></textarea>
+    <button type="submit" value="submit">Submit Update</button>
+  </form>
+</div>
+<button class="btn btn-default delete-meal">Remove Meal</button>
+<button class="btn btn-default update-meal-btn">Update Meal</button>
+</div>
+  {{/meal}}
+
+
+{{/each}}

@@ -70,9 +70,35 @@ body {
     }
 }
 
+.update-meal-form {
+  margin: 3px 3px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+}
+
+.get-all-meals{
+  margin: 10px 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  h4 {
+    margin-top: 5px;
+  }
+  ul {
+    text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+}
 .meal-box {
   border: 200px;
-  height: 450px;
+  height: 100%;
   width: 500px;
   display: auto;
   align-items: center;
@@ -102,7 +128,14 @@ body {
       height: 150px;
       word-wrap: break-word;
     }
-
+  .button-grp {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    .meal-btns {
+      margin: 10px 10px;
+    }
+  }
 }
 
 .messagegrid {

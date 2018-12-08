@@ -14,17 +14,30 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#sign-out-btn').on('click', authEvents.onSignOut)
   $('#meal-form').on('submit', mealEvents.onCreateMeal)
+  $('#show-meal-btn').on('click', mealEvents.onGetMeals)
+  $('.meal-box').on('click', '.delete-meal', mealEvents.onDeleteMeal)
+  $('.meal-box').on('submit', '.update-meal-form', mealEvents.onUpdateMeal)
   // $('body').on('submit', '#meal-form', mealEvents.onCreateMeal)
   // $('#meal-form').on(() => {
   //   $('.mealforms').on('submit', mealEvents.onCreatemeal)
   // })
 })
 
-// $('#submit-button').click(() => {
-//   $('#mealtype-form').submit(mealEvents.onCreateMeal)
-//   $('#date-form').submit(mealEvents.onCreateMeal)
-//   $('#meal-description-form').submit(mealEvents.onCreateMeal)
-// })
+$('.update-meal-btn').click(function () {
+  $('.update').show()
+})
+
+$('#show-meal-btn').click(function () {
+  $('.mealsforms').hide()
+  $('.get-all-meals').show()
+  $('#message').show(500)
+})
+
+$('#new-meal-btn').click(function () {
+  $('.mealsforms').show()
+  $('.get-all-meals').hide()
+  $('#message').show(500)
+})
 
 $('#sign-up-btn').click(function () {
   // $('#sign-up-form').fadeIn(500)
