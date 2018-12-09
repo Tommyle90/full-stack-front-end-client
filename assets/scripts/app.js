@@ -17,14 +17,16 @@ $(() => {
   $('#show-meal-btn').on('click', mealEvents.onGetMeals)
   $('.meal-box').on('click', '.delete-meal', mealEvents.onDeleteMeal)
   $('.meal-box').on('submit', '.update-meal-form', mealEvents.onUpdateMeal)
+  // $('.meal-box').on('click, '.update-meal-btn',)
   // $('body').on('submit', '#meal-form', mealEvents.onCreateMeal)
   // $('#meal-form').on(() => {
   //   $('.mealforms').on('submit', mealEvents.onCreatemeal)
   // })
 })
 
-$('.update-meal-btn').click(function () {
-  $('.update').show()
+$('.submit-btn').click(function () {
+  debugger
+  $('.update-' + event.target.attributes['data-id'].value).addClass('hidden')
 })
 
 $('#show-meal-btn').click(function () {

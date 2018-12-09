@@ -13,6 +13,7 @@ const onCreateMeal = (event) => {
     .then(ui.createMealSuccess)
     .catch(ui.failure)
 }
+
 const onGetMeals = (event) => {
   event.preventDefault()
   api.getMeal()
@@ -32,14 +33,15 @@ const onDeleteMeal = (event) => {
 const onUpdateMeal = (event) => {
   event.preventDefault()
   const id = $(event.target).parents('div').data('id')
-  const description = $('.description-submits').val()
-  const mealtype = $('.meal-hb').html()
-  const date = $('.date-hb').html()
+  const description = $('.description-submits-' + event.target.attributes['data-id'].value).val()
+  const mealtype = $('.meal-hb-' + event.target.attributes['data-id'].value).html()
+  const date = $('.date-hb-' + event.target.attributes['data-id'].value).html()
   console.log(id, mealtype, date, description)
   api.updateMeal(id, mealtype, date, description)
     .then(() => onGetMeals(event))
     .catch(ui.failure)
 }
+
 module.exports = {
   onCreateMeal,
   onGetMeals,

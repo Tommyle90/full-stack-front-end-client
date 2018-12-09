@@ -20,6 +20,9 @@ const onGetMealsSuccess = (data) => {
   console.log(store)
   const showMealsHtml = showMealsTemplate({ meals: data.meals })
   $('.get-all-meals').html(showMealsHtml)
+  $('.update-meal-btn').click(function () {
+    $('.update-' + event.target.attributes['data-id'].value).removeClass('hidden')
+  })
 }
 
 const onDeleteMeal = (deleteReponse) => {
