@@ -68,6 +68,8 @@ const onSignOutSuccess = (signOutResponse) => {
   $('#sign-in-btn').show()
   $('#bottom-btn').hide()
   $('.meal-box').hide()
+  $('.get-all-meals').empty()
+  $('.mealsforms').hide()
 }
 
 module.exports = {
