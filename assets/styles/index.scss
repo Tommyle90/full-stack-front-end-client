@@ -137,12 +137,27 @@ body {
     }
   }
 }
+
 .description-meals {
-  width: 200px;
-  align-content: center;
-  justify-content: center;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 250px;
+  margin: 0 auto;
 }
+
+.date-meals {
+  margin: 10px 10px;
+}
+
+.mealtype-meals {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
 .messagegrid {
   display: flex;
   align-items: center;
