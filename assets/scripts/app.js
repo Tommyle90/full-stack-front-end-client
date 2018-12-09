@@ -25,7 +25,6 @@ $(() => {
 })
 
 $('.submit-btn').click(function () {
-  debugger
   $('.update-' + event.target.attributes['data-id'].value).addClass('hidden')
 })
 
