@@ -24,7 +24,7 @@ const onGetMeals = (event) => {
 const onDeleteMeal = (event) => {
   event.preventDefault()
   const id = $(event.target).parents('div').data('id')
-  console.log(id)
+  // console.log(id)
   api.deleteMeal(id)
     .then(() => onGetMeals(event))
     .catch(ui.failure)
@@ -36,7 +36,7 @@ const onUpdateMeal = (event) => {
   const description = $('.description-submits-' + event.target.attributes['data-id'].value).val()
   const mealtype = $('.meal-hb-' + event.target.attributes['data-id'].value).html()
   const date = $('.date-hb-' + event.target.attributes['data-id'].value).html()
-  console.log(id, mealtype, date, description)
+  // console.log(id, mealtype, date, description)
   api.updateMeal(id, mealtype, date, description)
     .then(() => onGetMeals(event))
     .catch(ui.failure)
