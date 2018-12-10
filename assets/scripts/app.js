@@ -31,11 +31,13 @@ $('.submit-btn').click(function () {
 $('#show-meal-btn').click(function () {
   $('.mealsforms').hide()
   $('.get-all-meals').show()
+  $('#change-password-form').hide()
 })
 
 $('#new-meal-btn').click(function () {
   $('.mealsforms').show()
   $('.get-all-meals').hide()
+  $('#change-password-form').hide()
 })
 
 $('#sign-up-btn').click(function () {
