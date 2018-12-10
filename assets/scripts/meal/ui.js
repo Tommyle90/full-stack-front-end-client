@@ -33,9 +33,19 @@ const onDeleteMeal = (deleteReponse) => {
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
 }
+
+const updateMealSuccess = (updateMealResponse) => {
+  $('#message-box').html('Meal has been updated')
+  $('#message-box').addClass('success-message')
+  $('#message-box').removeClass('error-message')
+  setTimeout(function () {
+    $('#message-box').fadeOut().empty()
+  }, 1000)
+}
 module.exports = {
   createMealSuccess,
   failure,
   onGetMealsSuccess,
-  onDeleteMeal
+  onDeleteMeal,
+  updateMealSuccess
 }

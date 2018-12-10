@@ -39,6 +39,7 @@ const onUpdateMeal = (event) => {
   // console.log(id, mealtype, date, description)
   api.updateMeal(id, mealtype, date, description)
     .then(() => onGetMeals(event))
+    .then(ui.updateMealSuccess)
     .catch(ui.failure)
 }
 
