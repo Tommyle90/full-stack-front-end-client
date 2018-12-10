@@ -17,12 +17,15 @@ const failure = (failureResponse) => {
 
 const onGetMealsSuccess = (data) => {
   store.data = data
-  console.log(store)
+  console.log(data.meals.length)
   const showMealsHtml = showMealsTemplate({ meals: data.meals })
   $('.get-all-meals').html(showMealsHtml)
   $('.update-meal-btn').click(function () {
     $('.update-' + event.target.attributes['data-id'].value).removeClass('hidden')
   })
+  $('#message').html(`Total meals: ${data.meals.length}`)
+  $('#message').addClass('success-message')
+  $('#message').removeClass('error-message')
 }
 
 const onDeleteMeal = (deleteReponse) => {

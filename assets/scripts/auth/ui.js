@@ -70,6 +70,10 @@ const onSignOutSuccess = (signOutResponse) => {
   $('.meal-box').hide()
   $('.get-all-meals').empty()
   $('.mealsforms').hide()
+  $('#change-password-form').trigger('reset')
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 1000)
 }
 
 module.exports = {
