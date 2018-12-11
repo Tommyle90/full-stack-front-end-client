@@ -1,7 +1,5 @@
 
 {{#each this as |meal|}}
-
-  {{#meal}}
 <div class="meal" data-id="{{id}}">
   <div class="date-meals" data-id="{{id}}">
     <h5>
@@ -29,5 +27,4 @@
   <button class="btn btn-default delete-meal">Remove Meal</button>
   <button class="btn btn-default update-meal-btn" data-id="{{id}}">Update Meal</button>
 </div>
-  {{/meal}}
 {{/each}}
