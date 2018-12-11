@@ -42,10 +42,17 @@ const updateMealSuccess = (updateMealResponse) => {
     $('#message-box').fadeOut().empty()
   }, 1000)
 }
+
+const createMealFailure = (data) => {
+  $('#message').html(`Date not valid, please try again!`)
+  $('#message').addClass('success-message')
+  $('#message').removeClass('error-message')
+}
 module.exports = {
   createMealSuccess,
   failure,
   onGetMealsSuccess,
   onDeleteMeal,
-  updateMealSuccess
+  updateMealSuccess,
+  createMealFailure
 }

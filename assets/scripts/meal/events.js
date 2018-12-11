@@ -11,7 +11,7 @@ const onCreateMeal = (event) => {
   $(event.target).trigger('reset')
   api.createMeal(mealtype, userData)
     .then(ui.createMealSuccess)
-    .catch(ui.failure)
+    .catch(ui.createMealFailure)
 }
 
 const onGetMeals = (event) => {
