@@ -17,7 +17,7 @@ const failure = (failureResponse) => {
 
 const onGetMealsSuccess = (data) => {
   store.data = data
-  console.log(data.meals.length)
+  // console.log(data.meals.length)
   const showMealsHtml = showMealsTemplate({ meals: data.meals })
   $('.get-all-meals').html(showMealsHtml)
   $('.update-meal-btn').click(function () {
